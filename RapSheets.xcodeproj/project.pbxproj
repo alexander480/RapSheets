@@ -11,6 +11,9 @@
 		0AE5854E28D824AC005F60B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5854D28D824AC005F60B3 /* ContentView.swift */; };
 		0AE5855028D824AE005F60B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AE5854F28D824AE005F60B3 /* Assets.xcassets */; };
 		0AE5855328D824AE005F60B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AE5855228D824AE005F60B3 /* Preview Assets.xcassets */; };
+		0AE5855A28D84544005F60B3 /* GradientBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5855928D84544005F60B3 /* GradientBorder.swift */; };
+		0AE5855C28D8455C005F60B3 /* GradientForeground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5855B28D8455C005F60B3 /* GradientForeground.swift */; };
+		0AE5855E28D84576005F60B3 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5855D28D84576005F60B3 /* ColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		0AE5854D28D824AC005F60B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0AE5854F28D824AE005F60B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AE5855228D824AE005F60B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0AE5855928D84544005F60B3 /* GradientBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBorder.swift; sourceTree = "<group>"; };
+		0AE5855B28D8455C005F60B3 /* GradientForeground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientForeground.swift; sourceTree = "<group>"; };
+		0AE5855D28D84576005F60B3 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 				0AE5854D28D824AC005F60B3 /* ContentView.swift */,
 				0AE5854F28D824AE005F60B3 /* Assets.xcassets */,
 				0AE5855128D824AE005F60B3 /* Preview Content */,
+				0AE5855F28D8457E005F60B3 /* DVKit */,
 			);
 			path = RapSheets;
 			sourceTree = "<group>";
@@ -65,6 +72,32 @@
 				0AE5855228D824AE005F60B3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0AE5855F28D8457E005F60B3 /* DVKit */ = {
+			isa = PBXGroup;
+			children = (
+				0AE5856028D84586005F60B3 /* View Modifiers */,
+				0AE5856128D84598005F60B3 /* Extensions */,
+			);
+			path = DVKit;
+			sourceTree = "<group>";
+		};
+		0AE5856028D84586005F60B3 /* View Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				0AE5855928D84544005F60B3 /* GradientBorder.swift */,
+				0AE5855B28D8455C005F60B3 /* GradientForeground.swift */,
+			);
+			path = "View Modifiers";
+			sourceTree = "<group>";
+		};
+		0AE5856128D84598005F60B3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0AE5855D28D84576005F60B3 /* ColorExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +170,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AE5855C28D8455C005F60B3 /* GradientForeground.swift in Sources */,
+				0AE5855E28D84576005F60B3 /* ColorExtensions.swift in Sources */,
 				0AE5854E28D824AC005F60B3 /* ContentView.swift in Sources */,
 				0AE5854C28D824AC005F60B3 /* RapSheetsApp.swift in Sources */,
+				0AE5855A28D84544005F60B3 /* GradientBorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
