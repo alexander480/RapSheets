@@ -23,3 +23,4 @@ extension View {
         modifier(GradientBorder(colors: colors, startPoint: startPoint, endPoint: endPoint, lineWidth: lineWidth, cornerRadius: cornerRadius))
     }
 }
+
