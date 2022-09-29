@@ -15,8 +15,8 @@ struct RSTextField: View {
     var body: some View {
         TextField(placeholder, text: $text)
             .foregroundColor(.black)
-            .font(Font.custom("Futura", size: 16).weight(.regular))
-            .padding(EdgeInsets(top: 16, leading: 21, bottom: 15, trailing: 10))
+            .font(Font.custom("Futura", size: 14).weight(.regular))
+            .padding(EdgeInsets(top: 13, leading: 21, bottom: 15, trailing: 10))
             .frame(width: 277, height: 50)
             .background {
                 ZStack {

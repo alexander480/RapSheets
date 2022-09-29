@@ -17,11 +17,31 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct RapSheetsApp: App {
+    
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
+    @StateObject var authState = AuthViewModel()
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                ApplicationSwitcher()
+            }
+            .navigationViewStyle(.stack)
+            .environmentObject(authState)
+        }
+    }
+}
+
+struct ApplicationSwitcher: View {
+
+    @EnvironmentObject var authState: AuthStateViewModel
+
+    var body: some View {
+        if (authState.isLoggedIn) {
+            DashboardView()
+        } else {
+            LoginView()
         }
     }
 }

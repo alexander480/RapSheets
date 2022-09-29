@@ -21,8 +21,10 @@
 		0A33EC7928DA8DE8009363DD /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33EC7828DA8DE7009363DD /* LoginView.swift */; };
 		0A33EC7B28DA967B009363DD /* Futura.ttc in Resources */ = {isa = PBXBuildFile; fileRef = 0A33EC7A28DA967B009363DD /* Futura.ttc */; };
 		0A33EC8028DAAB57009363DD /* LineSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A33EC7F28DAAB57009363DD /* LineSpacer.swift */; };
+		0AD42DDF28E56EAA00C91635 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD42DDE28E56EAA00C91635 /* DashboardView.swift */; };
+		0AD42DE128E5706100C91635 /* NavigationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD42DE028E5706100C91635 /* NavigationExtensions.swift */; };
+		0AD42DE328E5777A00C91635 /* AuthStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD42DE228E5777A00C91635 /* AuthStateViewModel.swift */; };
 		0AE5854C28D824AC005F60B3 /* RapSheetsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5854B28D824AC005F60B3 /* RapSheetsApp.swift */; };
-		0AE5854E28D824AC005F60B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5854D28D824AC005F60B3 /* ContentView.swift */; };
 		0AE5855028D824AE005F60B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AE5854F28D824AE005F60B3 /* Assets.xcassets */; };
 		0AE5855328D824AE005F60B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AE5855228D824AE005F60B3 /* Preview Assets.xcassets */; };
 		0AE5855A28D84544005F60B3 /* GradientBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE5855928D84544005F60B3 /* GradientBorder.swift */; };
@@ -35,14 +37,16 @@
 		0A245C8E28E2CA2000563AD7 /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
 		0A245C9028E2CC5700563AD7 /* RSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSTextField.swift; sourceTree = "<group>"; };
 		0A245C9328E2E62D00563AD7 /* RSSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSecureField.swift; sourceTree = "<group>"; };
-		0A33EC7628DA89A0009363DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0A33EC7628DA89A0009363DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "RapSheets/Other/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0A33EC7828DA8DE7009363DD /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0A33EC7A28DA967B009363DD /* Futura.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Futura.ttc; sourceTree = "<group>"; };
-		0A33EC7C28DA9863009363DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0A33EC7C28DA9863009363DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A33EC7F28DAAB57009363DD /* LineSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSpacer.swift; sourceTree = "<group>"; };
+		0AD42DDE28E56EAA00C91635 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		0AD42DE028E5706100C91635 /* NavigationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationExtensions.swift; sourceTree = "<group>"; };
+		0AD42DE228E5777A00C91635 /* AuthStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStateViewModel.swift; sourceTree = "<group>"; };
 		0AE5854828D824AC005F60B3 /* RapSheets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RapSheets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AE5854B28D824AC005F60B3 /* RapSheetsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RapSheetsApp.swift; sourceTree = "<group>"; };
-		0AE5854D28D824AC005F60B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0AE5854F28D824AE005F60B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AE5855228D824AE005F60B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0AE5855928D84544005F60B3 /* GradientBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBorder.swift; sourceTree = "<group>"; };
@@ -76,6 +80,44 @@
 			path = RSKit;
 			sourceTree = "<group>";
 		};
+		0AD42DE428E58AFF00C91635 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0A33EC7828DA8DE7009363DD /* LoginView.swift */,
+				0AD42DDE28E56EAA00C91635 /* DashboardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0AD42DE528E58B0600C91635 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0AD42DE228E5777A00C91635 /* AuthStateViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0AD42DE628E58BA100C91635 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0A245C9228E2E5EC00563AD7 /* RSKit */,
+				0AE5855F28D8457E005F60B3 /* DVKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0AD42DE728E58BC900C91635 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				0AE5854F28D824AE005F60B3 /* Assets.xcassets */,
+				0AE5855128D824AE005F60B3 /* Preview Content */,
+				0A33EC7C28DA9863009363DD /* Info.plist */,
+				0A33EC7628DA89A0009363DD /* GoogleService-Info.plist */,
+				0A33EC7A28DA967B009363DD /* Futura.ttc */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		0AE5853F28D824AC005F60B3 = {
 			isa = PBXGroup;
 			children = (
@@ -95,16 +137,11 @@
 		0AE5854A28D824AC005F60B3 /* RapSheets */ = {
 			isa = PBXGroup;
 			children = (
-				0A33EC7C28DA9863009363DD /* Info.plist */,
 				0AE5854B28D824AC005F60B3 /* RapSheetsApp.swift */,
-				0AE5854D28D824AC005F60B3 /* ContentView.swift */,
-				0A33EC7828DA8DE7009363DD /* LoginView.swift */,
-				0AE5854F28D824AE005F60B3 /* Assets.xcassets */,
-				0A33EC7A28DA967B009363DD /* Futura.ttc */,
-				0A33EC7628DA89A0009363DD /* GoogleService-Info.plist */,
-				0AE5855128D824AE005F60B3 /* Preview Content */,
-				0A245C9228E2E5EC00563AD7 /* RSKit */,
-				0AE5855F28D8457E005F60B3 /* DVKit */,
+				0AD42DE428E58AFF00C91635 /* Views */,
+				0AD42DE528E58B0600C91635 /* Models */,
+				0AD42DE628E58BA100C91635 /* Extensions */,
+				0AD42DE728E58BC900C91635 /* Other */,
 			);
 			path = RapSheets;
 			sourceTree = "<group>";
@@ -142,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				0AE5855D28D84576005F60B3 /* ColorExtensions.swift */,
+				0AD42DE028E5706100C91635 /* NavigationExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -230,12 +268,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A33EC7928DA8DE8009363DD /* LoginView.swift in Sources */,
+				0AD42DDF28E56EAA00C91635 /* DashboardView.swift in Sources */,
 				0AE5855C28D8455C005F60B3 /* GradientForeground.swift in Sources */,
+				0AD42DE128E5706100C91635 /* NavigationExtensions.swift in Sources */,
 				0A33EC8028DAAB57009363DD /* LineSpacer.swift in Sources */,
 				0AE5855E28D84576005F60B3 /* ColorExtensions.swift in Sources */,
 				0A245C9128E2CC5700563AD7 /* RSTextField.swift in Sources */,
+				0AD42DE328E5777A00C91635 /* AuthStateViewModel.swift in Sources */,
 				0A245C9428E2E62D00563AD7 /* RSSecureField.swift in Sources */,
-				0AE5854E28D824AC005F60B3 /* ContentView.swift in Sources */,
 				0A245C8D28E2C7FB00563AD7 /* BorderOverlay.swift in Sources */,
 				0AE5854C28D824AC005F60B3 /* RapSheetsApp.swift in Sources */,
 				0AE5855A28D84544005F60B3 /* GradientBorder.swift in Sources */,
