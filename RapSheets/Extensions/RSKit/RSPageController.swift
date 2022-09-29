@@ -41,7 +41,7 @@ struct RSPageController: View {
                 .borderOverlay(lineWidth: 3, cornerRadius: 16)
             
             // Total number of pages
-            HStack(spacing: 12) {
+            HStack(spacing: 8) {
 
                 ZStack {
                     RoundedRectangle(cornerRadius: 8)
@@ -78,7 +78,7 @@ struct RSPageController: View {
                 }
                     
             }
-            .padding(.all, 12)
+            .padding(.all, 8)
             
 
             // Current page index
@@ -88,7 +88,7 @@ struct RSPageController: View {
 //                .offset(x: currentPosition)
 //                .animation(.linear(duration: 0.3))
         }
-        .frame(height: 65)
+        .frame(height: 55)
         .padding()
         
         Spacer()
