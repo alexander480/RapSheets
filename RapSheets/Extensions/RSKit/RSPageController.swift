@@ -43,17 +43,39 @@ struct RSPageController: View {
             // Total number of pages
             HStack(spacing: 12) {
 
-                RoundedRectangle(cornerRadius: 8)
-                    //.stroke(Color.black, style: StrokeStyle(lineWidth: 2, lineCap: .round))
-                    .gradientBorder(colors: buttonGradient, cornerRadius: 8, lineWidth: 3)
+                ZStack {
+                    RoundedRectangle(cornerRadius: 8)
+                        //.stroke(Color.black, style: StrokeStyle(lineWidth: 2, lineCap: .round))
+                        .gradientBorder(colors: buttonGradient, cornerRadius: 12, lineWidth: 3)
                     .foregroundColor(.white)
                     
+                    HStack(spacing: 2) {
+                        Image(systemName: "gear")
+                            .fontWeight(.heavy)
+                            .frame(width: 22, height: 20)
+                        
+                        Text("SETTINGS")
+                            .font(Font.custom("Futura", size: 12.0).weight(.heavy))
+                    }
+                }
+                    
+                ZStack() {
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.white, style: StrokeStyle(lineWidth: 2, lineCap: .round))
+                    Image(systemName: "house")
+                        .fontWeight(.heavy)
+                        .frame(width: 22, height: 20)
+                }
+                
 
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(Color.black, style: StrokeStyle(lineWidth: 2, lineCap: .round))
-
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(Color.black, style: StrokeStyle(lineWidth: 2, lineCap: .round))
+                ZStack {
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.white, style: StrokeStyle(lineWidth: 2, lineCap: .round))
+                    
+                    Image(systemName: "message")
+                        .fontWeight(.heavy)
+                        .frame(width: 24, height: 22)
+                }
                     
             }
             .padding(.all, 12)
