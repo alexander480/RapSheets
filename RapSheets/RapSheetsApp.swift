@@ -20,7 +20,7 @@ struct RapSheetsApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
-    @StateObject var authState = AuthViewModel()
+    @StateObject var authState = AuthStateViewModel()
     
     var body: some Scene {
         WindowGroup {
