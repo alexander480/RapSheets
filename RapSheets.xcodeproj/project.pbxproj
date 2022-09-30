@@ -42,6 +42,7 @@
 		0A33EC7A28DA967B009363DD /* Futura.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; path = Futura.ttc; sourceTree = "<group>"; };
 		0A33EC7C28DA9863009363DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A33EC7F28DAAB57009363DD /* LineSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineSpacer.swift; sourceTree = "<group>"; };
+		0AAE2A0428E7942F00A7A707 /* RESOURCES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RESOURCES.md; sourceTree = "<group>"; };
 		0AD42DDE28E56EAA00C91635 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		0AD42DE228E5777A00C91635 /* AuthStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStateViewModel.swift; sourceTree = "<group>"; };
 		0AD42DE928E5990B00C91635 /* RSPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSPageController.swift; sourceTree = "<group>"; };
@@ -126,14 +127,15 @@
 		0AE5854A28D824AC005F60B3 /* RapSheets */ = {
 			isa = PBXGroup;
 			children = (
+				0AAE2A0428E7942F00A7A707 /* RESOURCES.md */,
 				0A33EC7C28DA9863009363DD /* Info.plist */,
 				0A33EC7628DA89A0009363DD /* GoogleService-Info.plist */,
-				0AE5855128D824AE005F60B3 /* Preview Content */,
 				0A33EC7A28DA967B009363DD /* Futura.ttc */,
 				0AE5854F28D824AE005F60B3 /* Assets.xcassets */,
 				0AE5854B28D824AC005F60B3 /* RapSheetsApp.swift */,
 				0AD42DE428E58AFF00C91635 /* Views */,
 				0AD42DE528E58B0600C91635 /* Models */,
+				0AE5855128D824AE005F60B3 /* Preview Content */,
 				0AD42DE628E58BA100C91635 /* Extensions */,
 			);
 			path = RapSheets;
