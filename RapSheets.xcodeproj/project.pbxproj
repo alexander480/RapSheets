@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1CE4F828F66EDA0079D01C /* BasicRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1CE4F728F66EDA0079D01C /* BasicRegistrationView.swift */; };
 		0A245C8D28E2C7FB00563AD7 /* BorderOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A245C8C28E2C7FB00563AD7 /* BorderOverlay.swift */; };
 		0A245C8F28E2CA2000563AD7 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A245C8E28E2CA2000563AD7 /* Placeholder.swift */; };
 		0A245C9128E2CC5700563AD7 /* RSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A245C9028E2CC5700563AD7 /* RSTextField.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A1CE4F728F66EDA0079D01C /* BasicRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicRegistrationView.swift; sourceTree = "<group>"; };
 		0A245C8C28E2C7FB00563AD7 /* BorderOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderOverlay.swift; sourceTree = "<group>"; };
 		0A245C8E28E2CA2000563AD7 /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
 		0A245C9028E2CC5700563AD7 /* RSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSTextField.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				0A33EC7828DA8DE7009363DD /* LoginView.swift */,
+				0A1CE4F728F66EDA0079D01C /* BasicRegistrationView.swift */,
 				0AD42DDE28E56EAA00C91635 /* DashboardView.swift */,
 			);
 			path = Views;
@@ -127,10 +130,10 @@
 		0AE5854A28D824AC005F60B3 /* RapSheets */ = {
 			isa = PBXGroup;
 			children = (
-				0AAE2A0428E7942F00A7A707 /* RESOURCES.md */,
 				0A33EC7C28DA9863009363DD /* Info.plist */,
 				0A33EC7628DA89A0009363DD /* GoogleService-Info.plist */,
 				0A33EC7A28DA967B009363DD /* Futura.ttc */,
+				0AAE2A0428E7942F00A7A707 /* RESOURCES.md */,
 				0AE5854F28D824AE005F60B3 /* Assets.xcassets */,
 				0AE5854B28D824AC005F60B3 /* RapSheetsApp.swift */,
 				0AD42DE428E58AFF00C91635 /* Views */,
@@ -271,6 +274,7 @@
 				0A245C9428E2E62D00563AD7 /* RSSecureField.swift in Sources */,
 				0A245C8D28E2C7FB00563AD7 /* BorderOverlay.swift in Sources */,
 				0AD42DEA28E5990B00C91635 /* RSPageController.swift in Sources */,
+				0A1CE4F828F66EDA0079D01C /* BasicRegistrationView.swift in Sources */,
 				0AE5854C28D824AC005F60B3 /* RapSheetsApp.swift in Sources */,
 				0AE5855A28D84544005F60B3 /* GradientBorder.swift in Sources */,
 				0A245C8F28E2CA2000563AD7 /* Placeholder.swift in Sources */,

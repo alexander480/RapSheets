@@ -62,7 +62,7 @@ struct LoginView: View {
                 
             }
         }
-        .frame(width: 331, height: 266)
+        .frame(width: 334, height: 266)
     }
     
     fileprivate func ThirdPartyButtons() -> some View {
