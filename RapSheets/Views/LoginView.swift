@@ -10,14 +10,10 @@ import FirebaseAuth
 
 
 struct LoginView: View {
-    
+
+    @EnvironmentObject var viewRouter: ViewRouter
     @EnvironmentObject var authState: AuthStateViewModel
-    
-    // --------------------
-    // MARK: Variables
-    // --------------------
-    
-    let buttonGradient = [ Color(hex: "4000FF"), Color(hex: "b452b4") ]
+    let theme = DefaultTheme()
     
     @State var email = ""
     @State var password = ""
@@ -57,8 +53,8 @@ struct LoginView: View {
                 }
                 .font(Font.custom("Futura", size: 18).weight(.heavy))
                 .frame(width: 277, height: 54, alignment: .center)
-                .gradientForeground(colors: buttonGradient)
-                .gradientBorder(colors: buttonGradient, cornerRadius: 12.0, lineWidth: 4.0)
+                .gradientForeground(colors: theme.buttonGradient)
+                .gradientBorder(colors: theme.buttonGradient, cornerRadius: 12.0, lineWidth: 4.0)
                 
             }
         }
@@ -107,12 +103,12 @@ struct LoginView: View {
     
     fileprivate func createAccountButton() -> some View {
         Button("CREATE ACCOUNT") {
-            
+            viewRouter.currentPage = .Registration
         }
         .font(Font.custom("Futura", size: 18).weight(.heavy))
         .frame(width: 277, height: 54, alignment: .center)
-        .gradientForeground(colors: buttonGradient)
-        .gradientBorder(colors: buttonGradient, cornerRadius: 12.0, lineWidth: 4.0)
+        .gradientForeground(colors: theme.buttonGradient)
+        .gradientBorder(colors: theme.buttonGradient, cornerRadius: 12.0, lineWidth: 4.0)
         .padding()
     }
     

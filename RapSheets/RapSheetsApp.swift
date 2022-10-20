@@ -8,40 +8,30 @@
 import SwiftUI
 import FirebaseCore
 
-class AppDelegate: NSObject, UIApplicationDelegate {
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        FirebaseApp.configure()
-        return true
-    }
-}
-
 @main
 struct RapSheetsApp: App {
+    @StateObject var viewRouter = ViewRouter()
     
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    
-    @StateObject var authState = AuthStateViewModel()
+    init() {
+        FirebaseApp.configure()
+    }
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                ApplicationSwitcher()
-            }
-            .navigationViewStyle(.stack)
-            .environmentObject(authState)
+            MotherView().environmentObject(viewRouter)
         }
     }
 }
 
-struct ApplicationSwitcher: View {
-
-    @EnvironmentObject var authState: AuthStateViewModel
-
-    var body: some View {
-        if (authState.isLoggedIn) {
-            DashboardView()
-        } else {
-            LoginView()
-        }
-    }
-}
+//struct ApplicationSwitcher: View {
+//
+//    @EnvironmentObject var authState: AuthStateViewModel
+//
+//    var body: some View {
+//        if (authState.isLoggedIn) {
+//            DashboardView()
+//        } else {
+//            LoginView()
+//        }
+//    }
+//}
