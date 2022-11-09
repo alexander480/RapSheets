@@ -11,18 +11,21 @@ struct BorderOverlay: ViewModifier {
     var color: Color = .black
     var lineWidth: CGFloat = 2
     var cornerRadius: CGFloat = 0
+    var corners: UIRectCorner = .allCorners
     
     func body(content: Content) -> some View {
         content
             .overlay(
-                RoundedRectangle(cornerRadius: cornerRadius).stroke(color, lineWidth: lineWidth)
+                Rectangle()
+                    .stroke(color, lineWidth: lineWidth)
+                    .cornerRadius(cornerRadius, corners: corners)
             )
     }
 }
 
 extension View {
-    func borderOverlay(color: Color = .black, lineWidth: CGFloat = 2, cornerRadius: CGFloat = 0) -> some View {
-        modifier(BorderOverlay(color: color, lineWidth: lineWidth, cornerRadius: cornerRadius))
+    func borderOverlay(color: Color = .black, lineWidth: CGFloat = 2, cornerRadius: CGFloat = 0, corners: UIRectCorner = .allCorners) -> some View {
+        modifier(BorderOverlay(color: color, lineWidth: lineWidth, cornerRadius: cornerRadius, corners: corners))
     }
 }
 

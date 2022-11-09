@@ -13,6 +13,7 @@ struct LoginView: View {
 
     @EnvironmentObject var viewRouter: ViewRouter
     @EnvironmentObject var authState: AuthStateViewModel
+    
     let theme = DefaultTheme()
     
     @State var email = ""

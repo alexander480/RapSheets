@@ -21,8 +21,6 @@ struct RegistrationView: View {
     @State var password = ""
     @State var confirmPassword = ""
     
-    let buttonGradient = [ Color(hex: "4000FF"), Color(hex: "b452b4") ]
-    
     fileprivate func DividerLine() -> some View {
         RoundedRectangle(cornerRadius: 8).frame(width: 250, height: 3).padding(8)
     }
