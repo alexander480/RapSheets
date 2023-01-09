@@ -12,7 +12,7 @@ struct BorderOverlay: ViewModifier {
     var lineWidth: CGFloat = 2
     var cornerRadius: CGFloat = 0
     var corners: UIRectCorner = .allCorners
-    
+
     func body(content: Content) -> some View {
         content
             .overlay(

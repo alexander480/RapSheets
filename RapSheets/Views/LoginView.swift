@@ -12,7 +12,8 @@ import FirebaseAuth
 struct LoginView: View {
 
     @EnvironmentObject var viewRouter: ViewRouter
-    @EnvironmentObject var authState: AuthStateViewModel
+    // @EnvironmentObject var authState: AuthStateManager
+    @EnvironmentObject var authState: AuthViewModel
     
     let theme = DefaultTheme()
     
@@ -41,6 +42,8 @@ struct LoginView: View {
                     .textContentType(.emailAddress)
                     .frame(width: 277, height: 50)
                     .padding(.bottom, 18)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled(true)
                 
                 RSSecureField(placeholder: "Password", text: $password)
                     .textContentType(.password)
@@ -48,15 +51,16 @@ struct LoginView: View {
                     .padding(.bottom, 18)
                 
                 Button("SIGN IN") {
-                    Task {
-                        await authState.signIn(email: email, password: password)
+                    authState.signIn(email: email, password: password) { didSignIn in
+                        if (didSignIn) {
+                            viewRouter.currentPage = .Dashboard
+                        }
                     }
                 }
                 .font(Font.custom("Futura", size: 18).weight(.heavy))
                 .frame(width: 277, height: 54, alignment: .center)
                 .gradientForeground(colors: theme.buttonGradient)
                 .gradientBorder(colors: theme.buttonGradient, cornerRadius: 12.0, lineWidth: 4.0)
-                
             }
         }
         .frame(width: 334, height: 266)
@@ -135,10 +139,26 @@ struct LoginView: View {
             // self.ThirdPartyButtons()
             
             self.DividerLine()
+            
+            // Display Error Message If Login Failed
+            if let errorMessage = authState.errorMessage {
+                Text(errorMessage)
+                    .foregroundColor(.red)
+                    .font(Font.custom("Futura", size: 13).weight(.regular))
+                    .multilineTextAlignment(.center)
+                    .frame(width: 334)
+                    .padding()
+            }
+            
             Spacer()
             
             self.createAccountButton()
         }
+        .onAppear(perform: {
+            if authState.isLoggedIn {
+                viewRouter.currentPage = .Dashboard
+            }
+        })
     }
 }
 

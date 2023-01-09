@@ -11,6 +11,8 @@ import FirebaseAuth
 struct RegistrationView: View {
     
     @EnvironmentObject var viewRouter: ViewRouter
+    @EnvironmentObject var authState: AuthViewModel
+    
     let theme = DefaultTheme()
     
     @State var isProcessing = false
@@ -77,7 +79,11 @@ struct RegistrationView: View {
                         .padding(.bottom, 32)
                     
                     Button("CREATE ACCOUNT") {
-                        self.createUser(email: email, password: password, confirmPassword: confirmPassword)
+                        self.authState.createUser(email: email, password: password, confirmPassword: confirmPassword) { didCreateUser in
+                            if (didCreateUser) {
+                                viewRouter.currentPage = .Dashboard
+                            }
+                        }
                     }
                     .font(Font.custom("Futura", size: 18).weight(.heavy))
                     .frame(width: 277, height: 54, alignment: .center)
@@ -85,12 +91,12 @@ struct RegistrationView: View {
                     .gradientBorder(colors: theme.buttonGradient, cornerRadius: 12.0, lineWidth: 4.0)
                     .padding(.bottom, 32)
                     
-                    if (self.isProcessing) {
+                    if (authState.isBusy) {
                         ProgressView()
                     }
                     
-                    if (!self.errorMessage.isEmpty) {
-                        Text("Failed To Create Account. " + self.errorMessage)
+                    if let errorMessage = authState.errorMessage {
+                        Text("Failed To Create Account. " + errorMessage)
                             .multilineTextAlignment(.center)
                             .font(Font.footnote)
                             .foregroundColor(.red)
@@ -105,44 +111,38 @@ struct RegistrationView: View {
         }
     }
     
-    fileprivate func createUser(email: String, password: String, confirmPassword: String) {
-        self.isProcessing = true
-        
-        // Validate Inputs
-        if email.isEmpty || password.isEmpty || confirmPassword.isEmpty {
-            print("[WARNING] Failed To Register User. Empty Text Fields.")
-            self.isProcessing = false
-            self.errorMessage = "Please fill in all text fields."
-            return
-        }
-        else if password != confirmPassword {
-            print("[WARNING] Failed To Register User. Passwords do not match.")
-            self.isProcessing = false
-            self.errorMessage = "Passwords do not match."
-            return
-        }
-        
-        // Create Account
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            guard error == nil else {
-                self.isProcessing = false
-                self.errorMessage = error!.localizedDescription
-                return
-            }
-            
-            switch result {
-                case .none:
-                    print("[WARNING] Failed To Register User.")
-                    self.isProcessing = false
-                    
-                case .some(_):
-                    print("[SUCCESS] Successfully Registered User.")
-                    self.isProcessing = false
-                    viewRouter.currentPage = .Dashboard
-            }
-            
-        }
-    }
+//    fileprivate func createUser(email: String, password: String, confirmPassword: String) {
+//        self.isProcessing = true
+//
+//        // Validate Inputs
+//        if email.isEmpty || password.isEmpty || confirmPassword.isEmpty {
+//            print("[WARNING] Failed To Register User. Empty Text Fields.")
+//            self.isProcessing = false
+//            self.errorMessage = "Please fill in all text fields."
+//            return
+//        }
+//        else if password != confirmPassword {
+//            print("[WARNING] Failed To Register User. Passwords do not match.")
+//            self.isProcessing = false
+//            self.errorMessage = "Passwords do not match."
+//            return
+//        }
+//
+//        // Create Account
+//        Auth.auth().createUser(withEmail: email, password: password) { result, err in
+//            if let error = err {
+//                self.isProcessing = false
+//                self.errorMessage = error.localizedDescription
+//                return
+//            }
+//            else if let uid = result?.user.uid {
+//                print("[SUCCESS] Successfully Registered User.")
+//
+//                self.isProcessing = false
+//                viewRouter.currentPage = .Dashboard
+//            }
+//        }
+//    }
     
 }
 

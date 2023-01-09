@@ -15,6 +15,7 @@ enum Page {
     case Login
     case Registration
     case Dashboard
+    case CompleteProfile
 }
 
 
